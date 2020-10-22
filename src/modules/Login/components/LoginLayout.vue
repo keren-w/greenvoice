@@ -17,24 +17,22 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style scoped lang="scss">
     #login-wrapper {
         height: 100%;
         display: flex;
-    }
-
-    .illustration-wrapper {
-        height: 100%;
-        width: 50%;
-        background-color: #FFDCDC;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-    }
-
-    img {
-        width: 75%;
-        position: relative;
-        left: 8%;
+            .illustration-wrapper {
+            height: 100%;
+            width: 50%;
+            background-color: #FFDCDC;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+                img {
+                    height: 60%;
+                    position: relative;
+                    left: 8%;
+                }
+        }
     }
 </style>
