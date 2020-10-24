@@ -15,7 +15,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 
 * {
     margin: 0;
@@ -76,35 +76,16 @@ export default {
     src: url(https://cdn.d.greeninvoice.co.il/auth-app/assets/1.0.125/fonts/68c22fe.eot#iefix) format("embedded-opentype"),url(https://cdn.d.greeninvoice.co.il/auth-app/assets/1.0.125/fonts/257f20a.woff) format("woff"),url(https://cdn.d.greeninvoice.co.il/auth-app/assets/1.0.125/fonts/1e580a8.ttf) format("truetype")
 }
 
-@font-face {
-    font-family: ploni;
-    font-weight: 300;
-    font-style: normal;
-    font-display: fallback;
-    src: url(https://cdn.d.greeninvoice.co.il/auth-app/assets/1.0.125/fonts/06bd2eb.eot);
-    src: url(https://cdn.d.greeninvoice.co.il/auth-app/assets/1.0.125/fonts/06bd2eb.eot#iefix) format("embedded-opentype"),url(https://cdn.d.greeninvoice.co.il/auth-app/assets/1.0.125/fonts/43ebe15.woff) format("woff"),url(https://cdn.d.greeninvoice.co.il/auth-app/assets/1.0.125/fonts/d141ede.woff2) format("woff2")
-}
-
-@font-face {
-    font-family: ploni;
-    font-weight: 400;
-    font-style: normal;
-    font-display: fallback;
-    src: url(https://cdn.d.greeninvoice.co.il/auth-app/assets/1.0.125/fonts/27809ba.eot);
-    src: url(https://cdn.d.greeninvoice.co.il/auth-app/assets/1.0.125/fonts/27809ba.eot#iefix) format("embedded-opentype"),url(https://cdn.d.greeninvoice.co.il/auth-app/assets/1.0.125/fonts/0537c0a.woff) format("woff"),url(https://cdn.d.greeninvoice.co.il/auth-app/assets/1.0.125/fonts/d81a151.woff2) format("woff2")
-}
-
-@font-face {
-    font-family: ploni;
-    font-weight: 700;
-    font-style: normal;
-    font-display: fallback;
-    src: url(https://cdn.d.greeninvoice.co.il/auth-app/assets/1.0.125/fonts/53227a3.eot);
-    src: url(https://cdn.d.greeninvoice.co.il/auth-app/assets/1.0.125/fonts/53227a3.eot#iefix) format("embedded-opentype"),url(https://cdn.d.greeninvoice.co.il/auth-app/assets/1.0.125/fonts/7789390.woff) format("woff"),url(https://cdn.d.greeninvoice.co.il/auth-app/assets/1.0.125/fonts/8262970.woff2) format("woff2")
+.theme--light {
+    text-align: right;
+    font-family: "almoni-neue-dl", Helvetica, Arial, sans-serif;
+    // .buttons {
+    //     color: red;
+    // }
 }
 
 #app {
-  font-family: "almoni-neue-d", Helvetica, Arial, sans-serif;
+  font-family: "almoni-neue-dl", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;

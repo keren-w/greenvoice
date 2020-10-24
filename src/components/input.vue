@@ -2,8 +2,8 @@
     <div>
         <v-text-field
             v-model="inputValue"
-            :counter="10"
-            label="label"
+            :label="label"
+            :messages="message"
             required
           ></v-text-field>
     </div>
@@ -12,7 +12,7 @@
 <script>
 export default {
     name: 'form-input',
-    props: ['label'],
+    props: ['label', 'message'],
     data() {
         return {
             inputLabel: this.label,
