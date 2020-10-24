@@ -6,6 +6,7 @@
       <div class="form-wrapper">
           <div class="login-form">
               <h1 class="form-title">היי, טוב לראות אותך</h1>
+              <Input label="asds"/>
           </div>
       </div>
   </div>
@@ -13,12 +14,16 @@
 
 <script>
 // import Logo from '../../../components/logo.vue';
+import Input from '../../../components/input.vue';
 export default {
   name: 'login-layout',
+  components: {
+      Input
+  },
 //   props: {
 //     msg: String
 //   }
-data(){
+data() {
         return {
         }
     },
