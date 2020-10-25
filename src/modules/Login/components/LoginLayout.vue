@@ -1,6 +1,6 @@
 <template>
   <div id="login-wrapper">
-      <div class="illustration-wrapper">
+      <div class="illustration-wrapper" :style="{ backgroundColor: COLORS.illustrationBackground }">
           <img src="../../../assets/green_login_page.svg">
       </div>
       <LoginForm />
@@ -10,6 +10,8 @@
 <script>
 // import Logo from '../../../components/logo.vue';
 import LoginForm from './LoginForm.vue';
+import {COLORS} from '../../../common/constsants/colors.js';
+
 export default {
   name: 'login-layout',
   components: {
@@ -19,9 +21,8 @@ export default {
 //     msg: String
 //   }
 data() {
-        return {
-        }
-    },
+        return {COLORS}
+        },
 computed: {
 },
 methods: {
@@ -43,7 +44,6 @@ methods: {
             display: none;
         }
         height: 100%;
-        background-color: #FFDCDC;
         display: flex;
         justify-content: flex-end;
         align-items: center;

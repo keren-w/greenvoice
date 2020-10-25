@@ -1,5 +1,5 @@
 <template>
-    <img alt="Green Invoice" class="green-logo" src="../assets/green_logo.svg"/>
+    <img alt="Green Invoice" class="green-logo" src="../../assets/green_logo.svg"/>
 </template>
 
 <script>

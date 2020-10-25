@@ -8,11 +8,11 @@
                 <Input label="סיסמה" message="שכחת סיסמה?"/>
             </div>
             <div class="buttons">
-                <Button text="כניסה" class="enter" color="#18C746"/>
-                <Button text="כניסה מהירה" class="google" color="#0084F4" outlined/>
+                <Button text="כניסה" class="enter" :color="COLORS.basicButtonColor"/>
+                <Button text="כניסה מהירה" class="google" :color="COLORS.outlineButtonColor" outlined/>
             </div>
             <div class="action-links">
-                <a href="">
+                <a href="" :style="{color: COLORS.outlineButtonColor}">
                     עוד לא הצטרפת? ל-30 יום נסיון חינם
                 </a>
             </div>
@@ -21,10 +21,11 @@
 </template>
 
 <script>
-    import Input from '../../../components/input.vue';
-    import Button from '../../../components/button.vue';
-    import Logo from '../../../components/logo.vue';
-    import {required, isValidEmail} from '../data/inputValidations';
+    import Input from '../../../common/components/input.vue';
+    import Button from '../../../common/components/button.vue';
+    import Logo from '../../../common/components/logo.vue';
+    import {required, isValidEmail} from '../data/inputValidations.js';
+    import {COLORS} from '../../../common/constsants/colors.js';
 
         export default {
             name: 'login-form',
@@ -39,6 +40,7 @@
                         required,
                         isValidEmail
                     ],
+                    COLORS
                 }
             }
     }
