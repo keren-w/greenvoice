@@ -1,16 +1,16 @@
 <template>
   <div id="app">
-    <Login msg="Welcome to Your Vue.js App"/>
+    <LoginView/>
   </div>
 </template>
 
 <script>
-import Login from './modules/Login/'
+import LoginView from './views/LoginView'
 
 export default {
   name: 'App',
   components: {
-    Login
+    LoginView
   }
 }
 </script>

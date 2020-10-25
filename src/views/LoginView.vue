@@ -4,7 +4,8 @@
 
 <script>
 
-import LoginLayout from './components/LoginLayout'
+import LoginLayout from '../modules/Login/components/LoginLayout';
+
 export default {
   name: 'Login',
   props: {
