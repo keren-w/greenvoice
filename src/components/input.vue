@@ -3,6 +3,7 @@
         <v-text-field
             v-model="inputValue"
             :label="label"
+            :rules="rules"
             :messages="message"
             required
           ></v-text-field>
@@ -12,7 +13,7 @@
 <script>
 export default {
     name: 'form-input',
-    props: ['label', 'message'],
+    props: ['label', 'message', 'rules'],
     data() {
         return {
             inputLabel: this.label,
@@ -21,3 +22,12 @@ export default {
     }
 }
 </script>
+
+<style lang="scss">
+.v-text-field .v-label {
+    font-size: 17px;
+    &.v-label--active {
+        font-weight: bold;
+    }
+}
+</style>

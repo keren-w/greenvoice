@@ -79,9 +79,9 @@ export default {
 .theme--light {
     text-align: right;
     font-family: "almoni-neue-dl", Helvetica, Arial, sans-serif;
-    // .buttons {
-    //     color: red;
-    // }
+    .v-messages {
+        font-size: 13.6px;
+    }
 }
 
 #app {

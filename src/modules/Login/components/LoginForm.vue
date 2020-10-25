@@ -1,9 +1,10 @@
 <template>
     <div class="form-wrapper">
+        <Logo/>
         <div class="login-form">
             <h1 class="form-title">היי, טוב לראות אותך</h1>
             <div class="inputs">
-                <Input label="מייל" message="כתובת המייל איתה נרשמת לחשבונית ירוקה"/>
+                <Input label="מייל" :rules="emailRules" message="כתובת המייל איתה נרשמת לחשבונית ירוקה"/>
                 <Input label="סיסמה" message="שכחת סיסמה?"/>
             </div>
             <div class="buttons">
@@ -22,20 +23,37 @@
 <script>
     import Input from '../../../components/input.vue';
     import Button from '../../../components/button.vue';
+    import Logo from '../../../components/logo.vue';
+    import {required, isValidEmail} from '../data/inputValidations';
+
         export default {
             name: 'login-form',
             components: {
                 Input,
-                Button
+                Button,
+                Logo
             },
+            data() {
+                return {
+                    emailRules: [
+                        required,
+                        isValidEmail
+                    ],
+                }
+            }
     }
 </script>
 
 <style lang="scss" scoped>
    .form-wrapper {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        padding: 0 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .login-form {
+            max-width: 420px;
+            width: 100%;
+            }
             .form-title {
                 font-family: "almoni-tzar-bold";
                 font-size: 3.5rem;

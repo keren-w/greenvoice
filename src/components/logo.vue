@@ -10,7 +10,10 @@ export default {
 
 <style>
     .green-logo {
+        position: fixed;
+        top: 20px;
+        right: 20px;
         height: 34px;
-        width: 221px;
+        width: 166px;
     }
 </style>
