@@ -82,6 +82,16 @@ export default {
     .v-messages {
         font-size: 13.6px;
     }
+    &.error--text {
+        color: red;
+        &.v-label {
+            color: #23445a ;
+        }
+    }
+}
+
+input {
+    direction: rtl;
 }
 
 #app {

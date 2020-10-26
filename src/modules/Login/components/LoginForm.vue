@@ -4,8 +4,8 @@
         <div class="login-form">
             <h1 class="form-title">היי, טוב לראות אותך</h1>
             <div class="inputs">
-                <Input label="מייל" :rules="emailRules" message="כתובת המייל איתה נרשמת לחשבונית ירוקה"/>
-                <Input label="סיסמה" message="שכחת סיסמה?"/>
+                <Input label="מייל" :rules="emailRules" hint="כתובת המייל איתה נרשמת לחשבונית ירוקה"/>
+                <Input label="סיסמה" :rules="passwordRules" type="password" hint="שכחת סיסמה?"/>
             </div>
             <div class="buttons">
                 <Button text="כניסה" class="enter" :color="COLORS.basicButtonColor"/>
@@ -40,6 +40,7 @@
                         required,
                         isValidEmail
                     ],
+                    passwordRules: [required],
                     COLORS
                 }
             }
@@ -55,62 +56,74 @@
         .login-form {
             max-width: 420px;
             width: 100%;
+            @media screen and (max-width: 600px) {
+                mposition: relative;
+                top: 5%;
             }
-            .form-title {
-                font-family: "almoni-tzar-bold";
-                font-size: 3.5rem;
-                font-weight: bold;
-                letter-spacing: 0;
-                line-height: 48px;
-                text-align: right;
-                margin-bottom: 70px;
+        }
+        .form-title {
+            font-family: "almoni-tzar-bold";
+            font-size: 3.5rem;
+            font-weight: bold;
+            letter-spacing: 0;
+            line-height: 48px;
+            text-align: right;
+            margin-bottom: 70px;
+            @media screen and (max-width: 600px) {
+                margin-bottom: 40px;
+                font-size: 2.75rem;
+                text-align: center;
             }
-            .inputs {
-                >div {
-                    margin-bottom: 20px;
+        }
+        .inputs {
+            >div {
+                margin-bottom: 50px;
+                &:last-child {
+                    margin-bottom: 80px;
+                }
+                @media screen and (max-width: 600px) {
+                    margin-bottom: 30px;
                     &:last-child {
-                        margin-bottom: 80px;
-                    }
-                    @media screen and (max-width: 600px) {
                         margin-bottom: 50px;
                     }
                 }
             }
-            .buttons {
-                margin-bottom: 25px;
-                @media screen and (max-width: 600px) {
-                    flex-direction: column;
-                }
-                button {
-                    box-shadow: none;
-                    font-family: "almoni-neue-dl";
-                    font-weight: bold;
-                    width: 100%;
-                    &.enter {
-                        margin-bottom: 15px;
-                    }
-                    @media screen and (min-width: 601px) {
-                        &.enter {
-                            width: 55%;
-                            margin-bottom: 0;
-                        }
-                        &.google {
-                            width: 40%;    
-                        }
-                    }
-                    
-                }
-                display: flex;
-                direction: rtl;
-                justify-content: space-between;
+        }
+        .buttons {
+            margin-bottom: 25px;
+            @media screen and (max-width: 600px) {
+                flex-direction: column;
             }
-            .action-links {
+            button {
+                box-shadow: none;
+                font-family: "almoni-neue-dl";
+                font-weight: bold;
                 width: 100%;
-                text-align: right;
-                text-decoration: underline;
-                @media screen and (max-width: 600px) {
-                    text-align: center;
+                &.enter {
+                    margin-bottom: 15px;
                 }
+                @media screen and (min-width: 601px) {
+                    &.enter {
+                        width: 55%;
+                        margin-bottom: 0;
+                    }
+                    &.google {
+                        width: 40%;    
+                    }
+                }
+                
+            }
+            display: flex;
+            direction: rtl;
+            justify-content: space-between;
+        }
+        .action-links {
+            width: 100%;
+            text-align: right;
+            text-decoration: underline;
+            @media screen and (max-width: 600px) {
+                text-align: center;
             }
         }
+    }
 </style>

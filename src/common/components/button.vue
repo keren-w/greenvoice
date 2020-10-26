@@ -12,7 +12,7 @@
 
 <script>
 export default {
-    name: 'button',
+    name: 'Button',
     props: ['text', 'color', 'outlined', 'icon'],
     data() {
         return {
